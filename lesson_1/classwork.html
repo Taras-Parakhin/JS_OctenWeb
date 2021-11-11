@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<!--1. Створити масив з 10 чисел (можна використовувати Math.random Та Math.floor). Скласти результат цих чисел в змінній result.-->
+<!--2. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр-->
+<!--3. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр, автори-->
+<!--4. Створити маис об'єктів book з наступними полями  - назва, кількість сторінок, жанр, автори. Вивести кожну книгу як окремий об'єкт-->
+<!--5. Напишіть код, який вираховує площу прямокутника висотою 23см. (змінна height) та шириною 10см (змінна width).-->
+<!--Значення площі зберігати в змінній s.-->
+<!--6. Напиши код, який знаходить об'єм циліндра заввишки 10м (змінна heightC) та діаметром основи 4м (dC),-->
+<!--результат помістіть у змінну v.-->
+<!--7. У прямокутного трикутника дві сторони n (зі значенням 3) та m (зі значенням 4).-->
+<!--Знайдіть гіпотенузу k за теоремою Піфагора (потрібно використовувати функцію Math.pow (число, ступінь) або оператор зведення в ступінь **).-->
+
+
+<script>
+
+    function sum () {
+        const arr = [];
+        for (let i = 0; i < 10; i++) {
+            arr.push(Math.floor(Math.random() * 100) + 1);
+        }
+
+        let result = 0;
+
+        for (let item of arr) {
+            result += item;
+        }
+
+        return result;
+    }
+
+    console.log(sum());
+
+
+    const book = {
+        name: 'Oliver Twister',
+        pages: 95,
+        genre: 'dram'
+    }
+
+    const book1 = {
+        name: 'darkness',
+        pages: 1300,
+        genre: 'fantastic',
+        author: 'Tarmashev'
+    }
+
+    const books = [book, book1];
+
+    for (let item of books) {
+        console.log(item);
+    }
+
+    const s = (height, width) => height * width;
+    console.log(s(23, 10));
+
+    const v = (heightC, dC) => heightC * Math.PI * (dC/2)**2;
+    console.log(v(10, 4));
+
+    const k = (n, m) => Math.sqrt(n**2 + m**2);
+    console.log(k(3, 4));
+
+</script>
+
+
+</body>
+</html>
