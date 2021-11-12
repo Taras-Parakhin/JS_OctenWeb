@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- - Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число-->
+<!--(в першу, другу, третю или четверту частину години).-->
+
+
+<!-- - У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).-->
+
+<!-- - У нас є змінна test не дорівнює true, виведіть 'Вірно', інакше виведіть 'Неправильно'.-->
+<!--Перевірте роботу скрипта при test, що дорівнює true, false. Напишіть два варіанти скрипта - з коротким записом(тернаркою)-->
+
+
+<!-- - Якщо змінна a не дорівнює нулю, виведіть 'Вірно', інакше виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює 1, 0, -3-->
+
+<!-- - Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день.-->
+
+<!-- - Потрібно визначити Високосний рік чи ні. Високосні роки діляться націло на 4.-->
+
+<!-- - Використовуючи конструкцію if..else, напишіть код, який запитуватиме: „Яка «офіційна» назва JavaScript?“-->
+<!--Якщо користувач вводить «ECMAScript», то показати: «Правильно!», інакше – відобразити: «Не знаєте? ECMAScript!-->
+
+<script>
+
+    function time (num) {
+        if (num >= 0 && num < 15) {
+            console.log('1');
+        } else if (num >= 15 && num < 30) {
+            console.log('2');
+        } else if (num >= 30 && num < 45) {
+            console.log('3');
+        } else if (num >= 45 && num < 60) {
+            console.log('4');
+        } else {
+            console.log('0');
+        }
+    }
+
+    time(4);
+
+    // =====================================================
+
+    function day (num) {
+        if (num >= 1 && num < 11) {
+            console.log('1');
+        } else if (num >= 11 && num < 21) {
+            console.log('2');
+        } else if (num >= 21 && num <= 31) {
+            console.log('3');
+        } else {
+            console.log('0');
+        }
+    }
+
+    day(21);
+
+    // ======================================================
+
+    function bool1 (test) {
+        if (!test) {
+            console.log('correct');
+        } else {
+            console.log('uncorrect')
+        }
+    }
+
+    bool1(0);
+
+    function bool2 (test) {
+        console.log((!test) ? 'correct' : 'uncorrect');
+    }
+
+    bool2(1);
+
+    // =======================================================
+
+    function bool3 (a) {
+        console.log((a !== 0) ? 'correct' : 'uncorrect');
+    }
+
+    bool3(-3);
+
+    // ======================================================
+
+    function schedule (day) {
+        switch (day) {
+            case 1:
+                document.write('learn function-declaration');
+                break;
+            case 2:
+                document.write('learn function-expression');
+                break;
+            case 3:
+                document.write('learn object');
+                break;
+            case 4:
+                document.write('learn array');
+                break;
+            case 5:
+                document.write('learn method');
+                break;
+            case 6:
+                document.write('learn english');
+                break;
+            case 7:
+                document.write('do homework');
+                break;
+            default:
+                document.write('work for IT-company');
+        }
+    }
+
+    schedule(9);
+
+    // ======================================================
+
+    function year (days) {
+        console.log((days % 4 === 0) ? 'високосний' : 'невисокосний');
+    }
+
+    year(365);
+
+    // ======================================================
+
+    function nameJs () {
+        let unsw = prompt('Яка «офіційна» назва JavaScript?', '');
+
+        if (unsw === 'ECMAScript') {
+            document.write('Правильно!');
+        } else {
+            document.write('Не знаєте? - ECMAScript!');
+        }
+    }
+
+    nameJs();
+
+</script>
+</body>
+</html>
