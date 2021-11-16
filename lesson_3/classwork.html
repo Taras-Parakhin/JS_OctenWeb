@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<!--зробити масив з 10 чисел [2,17,13,6,22,31,45,66,100,-18]та:-->
+<!--1. перебрати його циклом while-->
+<!--2. перебрати його циклом for-->
+<!--3. перебрати циклом while та вивести  числа тільки з непарним індексом-->
+<!--4. перебрати циклом for та вивести  числа тільки з непарним індексом-->
+<!--5. перебрати циклом while та вивести  числа тільки парні  значення-->
+<!--6. перебрати циклом for та вивести  числа тільки парні  значення-->
+<!--7. замінити кожне число кратне 3 на слово "okten"-->
+<!--8. вивести масив в зворотньому порядку.-->
+<!--9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)-->
+
+<script>
+
+    let arr = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
+
+    // let i = 0;
+    // while (i < arr.length) {
+    //     arr[i];
+    //     i++;
+    // }
+
+    // ===============================================
+
+    // for (let i = 0; i < arr.length; i++) {
+    //     arr[i];
+    // }
+
+    // ==================================================
+
+    let arrOddWhile = [];
+    {
+        let i = 0;
+        while (i < arr.length) {
+            if (i % 2 !== 0) {
+                arrOddWhile.push(arr[i]);
+            }
+            i++;
+        }
+    }
+    console.log(arrOddWhile);
+
+    // =================================================
+
+    let arrOddFor = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (i % 2 !== 0) {
+            arrOddFor.push(arr[i]);
+        }
+    }
+    console.log(arrOddFor);
+
+    // ================================================
+
+    let arrEvenWhile = [];
+    {
+        let i = 0;
+        while (i < arr.length) {
+            if (arr[i] % 2 === 0) {
+                arrEvenWhile.push(arr[i]);
+            }
+            i++;
+        }
+    }
+    console.log(arrEvenWhile);
+
+    // ================================================
+
+    let arrEvenFor = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            arrEvenFor.push(arr[i]);
+        }
+    }
+    console.log(arrEvenFor);
+
+    // ================================================
+
+    let arrChange = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 3 === 0) {
+            arrChange.push('octen');
+        } else {
+            arrChange.push(arr[i]);
+        }
+    }
+    console.log(arrChange);
+
+    // ================================================
+
+    let arrReverse = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        arrReverse[(arr.length - 1) - i] = arr[i];
+    }
+    console.log(arrReverse);
+
+    // -------------------------------------------------
+
+    // console.log(arr.reverse());
+
+    // ==================================================
+
+    // let i = arr.length - 1;
+    // while (i >= 0) {
+    //     arr[i];
+    //     i--;
+    // }
+
+    // ===============================================
+
+    // for (let i = arr.length - 1; i >= 0; i--) {
+    //     arr[i];
+    // }
+
+    // ==================================================
+
+    let arrOddWhileReverse = [];
+    {
+        let i = arr.length - 1;
+        while (i >= 0) {
+            if (i % 2 !== 0) {
+                arrOddWhileReverse.push(arr[i]);
+            }
+            i--;
+        }
+    }
+    console.log(arrOddWhileReverse);
+
+    // =================================================
+
+    let arrOddForReverse = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        if (i % 2 !== 0) {
+            arrOddForReverse.push(arr[i]);
+        }
+    }
+    console.log(arrOddForReverse);
+
+    // ================================================
+
+    let arrEvenWhileReverse = [];
+    {
+        let i = arr.length - 1;
+        while (i >= 0) {
+            if (arr[i] % 2 === 0) {
+                arrEvenWhileReverse.push(arr[i]);
+            }
+            i--;
+        }
+    }
+    console.log(arrEvenWhileReverse);
+
+    // ================================================
+
+    let arrEvenForReverse = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        if (arr[i] % 2 === 0) {
+            arrEvenForReverse.push(arr[i]);
+        }
+    }
+    console.log(arrEvenForReverse);
+
+    // ================================================
+
+    let arrChangeReverse = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        if (arr[i] % 3 === 0) {
+            arrChangeReverse.push('octen');
+        } else {
+            arrChangeReverse.push(arr[i]);
+        }
+    }
+    console.log(arrChangeReverse);
+
+</script>
+
+</body>
+</html>
