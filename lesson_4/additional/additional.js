@@ -8,22 +8,24 @@ function first(a, b) {
 
 // ======================
 
-function check(arr1, arr2) {
-    if (arr1.length <= arr2.length) {
-        return arr1.length;
-    } else {
-        return arr2.length;
-    }
-}
-
 function sumArr(arr1, arr2) {
-    const arr3 = [];
+    let arr3;
 
-    for (let i = 0; i < check(arr1, arr2); i++) {
-        arr3[i] = arr1[i] + arr2[i];
+    if (arr1.length > arr2.length) {
+        arr3 = arr1;
+        for (let i = 0; i < arr2.length; i++) {
+            arr3[i] = arr3[i] + arr2[i];
+        }
+    } else {
+        arr3 = arr2;
+        for (let i = 0; i < arr1.length; i++) {
+            arr3[i] = arr1[i] + arr3[i];
+        }
     }
+
     return arr3;
 }
+
 
 // ==============================
 
