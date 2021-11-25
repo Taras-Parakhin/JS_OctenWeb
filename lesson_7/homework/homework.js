@@ -72,11 +72,8 @@ const products = [
 ];
 
 const client = arr.map((item, i) => {
-    const obj = Object.create(item);
-
     item.order = products[i];
-
-    return obj;
+    return item;
 });
 
 console.log(client);
