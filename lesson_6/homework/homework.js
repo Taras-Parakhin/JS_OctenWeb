@@ -17,7 +17,9 @@ console.log('hello world'.length, 'lorem ipsum'.length, 'javascript is cool'.len
 // - Перевести до нижнього регістру настипні стрінгові значення
 // 'HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL'
 
-'HELLO WORLD'.toLowerCase(), 'LOREM IPSUM'.toLowerCase(), 'JAVASCRIPT IS COOL'.toLowerCase();
+'HELLO WORLD'.toLowerCase();
+'LOREM IPSUM'.toLowerCase();
+'JAVASCRIPT IS COOL'.toLowerCase();
 
 // ===================================================
 
