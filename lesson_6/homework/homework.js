@@ -8,7 +8,9 @@ console.log('hello world'.length, 'lorem ipsum'.length, 'javascript is cool'.len
 // - Перевести до великого регістру наступні стрінгові значення
 // 'hello world', 'lorem ipsum', 'javascript is cool'
 
-'hello world'.toUpperCase(), 'lorem ipsum'.toUpperCase(), 'javascript is cool'.toUpperCase();
+'hello world'.toUpperCase();
+'lorem ipsum'.toUpperCase();
+'javascript is cool'.toUpperCase();
 
 // ===================================================
 
