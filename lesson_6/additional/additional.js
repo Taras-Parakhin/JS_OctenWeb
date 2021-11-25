@@ -106,7 +106,7 @@ const count = (str, stringsearch) => {
   let num = 0;
 
   for (const item of str) {
-      if (item === stringsearch) {
+      if (item.indexOf(stringsearch) !== -1) {
           num++;
       }
   }
