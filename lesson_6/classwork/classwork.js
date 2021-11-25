@@ -17,14 +17,12 @@ const normalize = n => {
             fullname += n[i];
         } else if (!abc.includes(n[i]) && abc.toUpperCase().includes(n[i + 1])) {
             fullname += ' ';
-        } else {
-            continue;
         }
     }
 
     return fullname;
 };
-
+console.log(normalize(n1))
 // ==========================================================
 
 // - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
