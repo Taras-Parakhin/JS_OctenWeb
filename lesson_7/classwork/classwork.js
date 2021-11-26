@@ -17,7 +17,9 @@ function User(model, producer, year, maxSpeed, engineVal) {
     };
     this.info = function () {
         for (const key in this) {
-            console.log(`${key} - ${this[key]}`)
+            if (typeof this[key] !== 'function') {
+                console.log(`${key} - ${this[key]}`)
+            }
         }
     };
     this.increaseMaxSpeed = function (newSpeed) {
