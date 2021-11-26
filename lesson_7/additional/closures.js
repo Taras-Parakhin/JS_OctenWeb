@@ -13,7 +13,7 @@ class Card {
         this.historyLogs.push({
             operation: 'Received credits',
             credits: putCredits,
-            operationTime: ''
+            operationTime: new Date()
         })
     }
 
@@ -24,7 +24,7 @@ class Card {
             this.historyLogs.push({
                 operation: 'Withdrawal of credits',
                 credits: takeCredits,
-                operationTime: ''
+                operationTime: new Date()
             })
         } else {
             console.error('сума перевищує баланс або встановлений ліміт');
@@ -37,7 +37,7 @@ class Card {
         this.historyLogs.push({
             operation: 'Transition limit change',
             credits: setTransitionLimit,
-            operationTime: ''
+            operationTime: new Date()
         });
     }
 
@@ -70,4 +70,3 @@ const userCard = n => {
         }
     }
 };
-
