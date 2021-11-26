@@ -7,13 +7,17 @@ class Card {
         this.key = key;
     }
 
+    getCardOptions() {
+        return this;
+    }
+
     putCredits(putCredits) {
         this.balance = this.balance + putCredits;
 
         this.historyLogs.push({
             operation: 'Received credits',
             credits: putCredits,
-            operationTime: new Date()
+            operationTime: new Date().toISOString().substring(0, 19).replaceAll('-', '/').replace('T', ', ')
         })
     }
 
@@ -24,7 +28,7 @@ class Card {
             this.historyLogs.push({
                 operation: 'Withdrawal of credits',
                 credits: takeCredits,
-                operationTime: new Date()
+                operationTime: new Date().toISOString().substring(0, 19).replaceAll('-', '/').replace('T', ', ')
             })
         } else {
             console.error('сума перевищує баланс або встановлений ліміт');
@@ -37,7 +41,7 @@ class Card {
         this.historyLogs.push({
             operation: 'Transition limit change',
             credits: setTransitionLimit,
-            operationTime: new Date()
+            operationTime: new Date().toISOString().substring(0, 19).replaceAll('-', '/').replace('T', ', ')
         });
     }
 
@@ -70,3 +74,4 @@ const userCard = n => {
         }
     }
 };
+
