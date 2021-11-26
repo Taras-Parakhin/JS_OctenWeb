@@ -3,7 +3,7 @@ class Card {
     constructor(balance, transactionLimit, historyLogs, key) {
         this.balance = balance;
         this.transactionLimit = transactionLimit;
-        this.historyLogs = [];
+        this.historyLogs = historyLogs;
         this.key = key;
     }
 
@@ -71,4 +71,3 @@ const userCard = n => {
     }
 };
 
-console.log(userCard(2));
