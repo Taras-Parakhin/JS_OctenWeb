@@ -76,9 +76,7 @@ const client = arr.map((item, i) => {
     return item;
 });
 
-console.log(client);
 
 // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
 
 const sortClient = client.sort((a, b) => a.order.length - b.order.length);
-console.log(sortClient);
