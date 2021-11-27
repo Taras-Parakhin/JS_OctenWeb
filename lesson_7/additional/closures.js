@@ -82,6 +82,17 @@ class UserAccount {
     }
 
     addCard() {
+        let num = 1;
 
+        this.cards.push(userCard(num));
+        num++;
+    }
+
+    getCardByKey(n) {
+        for (const item in this.cards) {
+            if (item.key === n) {
+                return item;
+            }
+        }
     }
 }
