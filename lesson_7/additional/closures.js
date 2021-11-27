@@ -81,16 +81,12 @@ class UserAccount {
         this.cards = cards;
     }
 
-    addCard(n = 1) {
-        let num = n;
-
-        if (num > 3) {
+    addCard(n) {
+        if (n > 3) {
             return null;
         }
 
-        this.cards[num] = userCard(num);
-
-        return n++;
+        this.cards[n] = userCard(n);
     }
 
     getCardByKey(n) {
@@ -101,4 +97,3 @@ class UserAccount {
         }
     }
 }
-
