@@ -84,7 +84,7 @@ class UserAccount {
     addCard() {
         let num = 1;
 
-        this.cards.push(userCard(num));
+        this.cards.card = userCard(num);
         num++;
     }
 
@@ -96,3 +96,4 @@ class UserAccount {
         }
     }
 }
+
