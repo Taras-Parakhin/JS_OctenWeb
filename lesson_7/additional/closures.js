@@ -60,14 +60,13 @@ class Card {
     }
 }
 
-
-const card1 = new Card(100, 100, [], 1);
-const card2 = new Card(100, 100, [], 2);
-const card3 = new Card(100, 100, [], 3);
-
-const cards = [card1, card2, card3];
-
 const userCard = n => {
+    const cards = [
+        new Card(100, 100, [], 1),
+        new Card(100, 100, [], 2),
+        new Card(100, 100, [], 3),
+    ];
+
     for (const item of cards) {
         if (item.key === n) {
             return item;
@@ -75,3 +74,14 @@ const userCard = n => {
     }
 };
 
+
+class UserAccount {
+    constructor(name, cards) {
+        this.name = name;
+        this.cards = cards;
+    }
+
+    addCard() {
+
+    }
+}
