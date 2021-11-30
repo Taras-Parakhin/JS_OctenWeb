@@ -30,7 +30,7 @@ const a = document.getElementsByTagName('a');
 for (const item of a) {
     item.classList.add('anchor');
 }
-
+console.log(a[0].classList)
 // g) отримує всі елементи 'a' та у випадку, якщо текстовий контен елементу дорівнює link3, змінює йому розмір тексту на 40 пікселів
 for (const item of a) {
     if (item.innerText === 'link3') {
