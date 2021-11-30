@@ -7,7 +7,7 @@ function getherClassName(elem) {
         for (const item of elem.children) {
             if (item.classList.length) {
                 for (const i of item.classList) {
-                    arr.push(i)
+                    arr.push(i);
                 }
             }
             getherClassName(item);
