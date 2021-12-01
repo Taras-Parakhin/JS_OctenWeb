@@ -3,9 +3,11 @@
 
 // -- отримує текст з параграфа з id "content"
 const text1 = document.getElementById('content');
+text1.innerText;
 
 // -- отримує текст з блоку з id "rules"
 const text2 = document.getElementById('rules');
+text2.innerText;
 
 // -- замініть текст параграфа з id 'content' на будь-який інший
 text1.innerText = 'qwert';
