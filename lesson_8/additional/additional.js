@@ -4,7 +4,7 @@
 function arrClassName(obj) {
     const arr = [];
 
-    function getherClassName(obj) {
+    function gatherClassName(obj) {
         if (obj.children.length) {
             for (const item of obj.children) {
                 if (item.classList.length) {
@@ -12,12 +12,12 @@ function arrClassName(obj) {
                         arr.push(i);
                     }
                 }
-                getherClassName(item);
+                gatherClassName(item);
             }
         }
     }
 
-    getherClassName(obj);
+    gatherClassName(obj);
 
     return arr;
 }
