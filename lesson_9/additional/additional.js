@@ -234,7 +234,6 @@
     ];
 
 // Створити під кожен елемент окремий блок. В цьому блоці, під кожну властивість, та властивості внутрішніх об'єктів створити свої окремі блок.
-
 let divWrap = document.createElement('div');
 document.body.appendChild(divWrap);
 divWrap.style.cssText = 'display: flex; flex-wrap: wrap; gap: 50px';
@@ -283,7 +282,8 @@ usersList.forEach((item, i) => {
             }
         }
     }
-});
+})
+
 
 
 
