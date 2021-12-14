@@ -70,18 +70,3 @@ formCar.onsubmit = function (e) {
     inputType.value = '';
     inputVolume.value = '';
 };
-
-const arr = [
-                {
-                childs: [{age:25,firstName:"Marta"},
-                        {childs: [{age:10,firstName:"Arnold"},{age:12,firstName:"Nick"}],
-                        age:32,firstName:"Peter"}],
-                age:60,firstName:"Alina"
-                },
-                {age:35,firstName:"Barbara"},
-                {age:43,firstName:"Jack"},
-                {age:52,firstName:"Tom"},
-                {childs:[{age:15,firstName:"Mike"},{age:16,firstName:"Joshua"}],
-                age:44,firstName:"Michael"}
-];
-

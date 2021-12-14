@@ -3,20 +3,20 @@
 //     При лівому кліку миші вивести в консоль інформацію про блок або елемент на який відбувся клік.
 //     Інформація яку потрібно вивести: Назва тегу, список класів, список ід, розміри в форматі висота*ширина
 
-document.onclick = function (e) {
-    let x = e.clientX;
-    let y = e.clientY;
-    let tegName = document.elementFromPoint(x, y).localName;
-    let classList = document.elementFromPoint(x, y).classList;
-    let list = '';
-    for (const item of classList) {
-        list += item + ' ';
-    }
-    let id = document.elementFromPoint(x, y).id;
-    let height = document.elementFromPoint(x, y).clientHeight;
-    let width = document.elementFromPoint(x, y).clientWidth;
-    console.log(`teg: ${tegName}; class: ${list}; id: ${id}; size: ${height}x${width}`);
-};
+// document.onclick = function (e) {
+//     let x = e.clientX;
+//     let y = e.clientY;
+//     let tegName = document.elementFromPoint(x, y).localName;
+//     let classList = document.elementFromPoint(x, y).classList;
+//     let list = '';
+//     for (const item of classList) {
+//         list += item + ' ';
+//     }
+//     let id = document.elementFromPoint(x, y).id;
+//     let height = document.elementFromPoint(x, y).clientHeight;
+//     let width = document.elementFromPoint(x, y).clientWidth;
+//     console.log(`teg: ${tegName}; class: ${list}; id: ${id}; size: ${height}x${width}`);
+// };
 
 // =========================================================================================
 
@@ -24,27 +24,27 @@ document.onclick = function (e) {
 //     При лівому кліку миші  зробить popup (спливаючий блок) в якому буде вся інформація про блок.
 //     Інформація яку потрібно вивести в popup: Назва тегу, список класів, список ід, розміри в форматі висота*ширина
 
-let div = document.createElement('div');
-document.addEventListener('click', (e) => {
-    let x = e.clientX;
-    let y = e.clientY;
-    let tegName = document.elementFromPoint(x, y).localName;
-    let classList = document.elementFromPoint(x, y).classList;
-    let list = ''.trim();
-    for (const item of classList) {
-        list += ' ' + item;
-    }
-    let id = document.elementFromPoint(x, y).id;
-    let height = document.elementFromPoint(x, y).clientHeight;
-    let width = document.elementFromPoint(x, y).clientWidth;
-    div.innerHTML = `<div>teg: ${tegName}</div><div>class:${list}</div><div>id: ${id}</div><div>size: ${height}x${width}</div>`;
-    div.style.cssText = `position: fixed; top: ${y}px; left: ${x}px; background: white; padding: 10px`;
-    document.body.append(div);
-});
-
-document.addEventListener('click', (e) => {
-    div.hidden = false;
-});
+// let div = document.createElement('div');
+// document.addEventListener('click', (e) => {
+//     let x = e.clientX;
+//     let y = e.clientY;
+//     let tegName = document.elementFromPoint(x, y).localName;
+//     let classList = document.elementFromPoint(x, y).classList;
+//     let list = ''.trim();
+//     for (const item of classList) {
+//         list += ' ' + item;
+//     }
+//     let id = document.elementFromPoint(x, y).id;
+//     let height = document.elementFromPoint(x, y).clientHeight;
+//     let width = document.elementFromPoint(x, y).clientWidth;
+//     div.innerHTML = `<div>teg: ${tegName}</div><div>class:${list}</div><div>id: ${id}</div><div>size: ${height}x${width}</div>`;
+//     div.style.cssText = `position: fixed; top: ${y}px; left: ${x}px; background: white; padding: 10px`;
+//     document.body.append(div);
+// });
+//
+// document.addEventListener('click', (e) => {
+//     div.hidden = false;
+// });
 
 // =========================================================================================
 
@@ -227,12 +227,36 @@ inputCity.onclick = function () {
 // НО если у (какого-либо)дочеренего элемента есть дети, то нажатие "вперед" позволяет нам войти внутрь элемента и  выводит первого ребенка. и тд.
 //     Когда все дети заканчиваются, мы выходим из данного дочернего элемента и переходим к следующему, лежащему с ним на одном уровне
 
-// let obj = document.getElementsByClassName('promo');
-// let btn = document.createElement('button');
-// btn.innerText = 'Вперед';
-// btn.style.fontSize = '24px'
-// document.body.append(btn);
+let obj = document.getElementsByClassName('promo');
+let btn = document.createElement('button');
+btn.innerText = 'Вперед';
+btn.style.fontSize = '24px'
+document.body.append(btn);
 
+
+
+function asd(obj) {
+    let arr = [];
+    // debugger
+    console.log(obj)
+    for (const item of obj) {
+        arr.push(item)
+
+    }
+    return arr;
+}
+
+let a = asd(obj[0]);
+console.log(a)
+let num = 0;
+btn.onclick = function () {
+    if (!a[num].children) {
+        console.log(arr[num].localName);
+        num++;
+    }else {
+        asd(arr[num]);
+    }
+};
 
 // =====================================================================================
 
@@ -266,12 +290,12 @@ left.addEventListener('click', () => {
 //     Завдання важке для розуміння, але дуже легке в реалізації. Тут треба буде погуглити
 // *** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан
 
-document.onmousemove = () => {
-    let text = document.getSelection().getRangeAt(0);
-    let selectionText = text.extractContents();
-    let span = document.createElement("span");
-    span.style.fontFamily = 'cursive';
-    span.appendChild(selectionText);
-    text.insertNode(span);
-};
+// document.onmousemove = () => {
+//     let text = document.getSelection().getRangeAt(0);
+//     let selectionText = text.extractContents();
+//     let span = document.createElement("span");
+//     span.style.fontFamily = 'cursive';
+//     span.appendChild(selectionText);
+//     text.insertNode(span);
+// };
 

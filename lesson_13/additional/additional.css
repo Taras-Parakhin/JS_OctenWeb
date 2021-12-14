@@ -1,0 +1,29 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#product {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+input {
+    height: 50px;
+    font-size: 24px;
+}
+
+[name="name"], [name="photo"] {
+    width: 600px;
+}
+
+[name="amount"], [name="price"], [name="btn"] {
+    width: 150px;
+}
+
+.link {
+    margin-top: 50px;
+    font-size: 24px;
+    text-align: center;
+}
