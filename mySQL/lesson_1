@@ -44,7 +44,7 @@ select * from cars order by id desc limit 5;
 select avg(price) from cars where model='kia';
 select avg(price), model from cars group by model;
 select count(model), model as count from cars group by model;
-select count(model) from cars group by model order by count(model) desc limit 1;
+select count(model), model from cars group by model order by count(model) desc limit 1;
 
 select * from cars where model like 'a%a%';
 select * from cars where length(model)>8;
